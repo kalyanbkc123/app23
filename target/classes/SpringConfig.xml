@@ -1,0 +1,42 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd">
+ <bean id="address1" class="com.durgasoft.beans.Address"
+       p:hno="123"
+       p:street="Gandhi-colony"
+       p:city="Hyderabad"
+       p:state="Telanagana"/>
+
+    <bean id="address2" class="com.durgasoft.beans.Address"
+          p:hno="450"
+          p:street="Nehru colony"
+          p:city="Anantapur"
+          p:state="Andhra Pradesh"
+          autowire-candidate="false"
+    />
+
+    <bean id="account1" class="com.durgasoft.beans.Account"
+          p:accNo="333"
+          p:accHolderName="Kalyan bkc"
+          p:accType="Savings"
+          p:balance="50000"
+          autowire-candidate="false"
+    />
+
+    <bean id="account2" class="com.durgasoft.beans.Account"
+          p:accNo="444"
+          p:accHolderName="Ravi"
+          p:accType="Savings"
+          p:balance="50000"/>
+
+    <bean id="employee" class="com.durgasoft.beans.Employee"
+          p:eno="111"
+          p:ename="kalyan b"
+          p:esal="76000"
+          autowire="byType"
+          />
+
+
+</beans>
